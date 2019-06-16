@@ -9,7 +9,7 @@
 import UIKit
 import SQLite3
 
-class ViewController: UIViewController {
+class BibleBooksVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

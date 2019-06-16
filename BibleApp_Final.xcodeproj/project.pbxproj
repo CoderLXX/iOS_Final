@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CAF3E23A22B04ACE00DDAB21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF3E23922B04ACE00DDAB21 /* AppDelegate.swift */; };
-		CAF3E23C22B04ACE00DDAB21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF3E23B22B04ACE00DDAB21 /* ViewController.swift */; };
+		CAF3E23C22B04ACE00DDAB21 /* BibleBooksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF3E23B22B04ACE00DDAB21 /* BibleBooksVC.swift */; };
 		CAF3E23F22B04ACE00DDAB21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAF3E23D22B04ACE00DDAB21 /* Main.storyboard */; };
 		CAF3E24122B04AD100DDAB21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAF3E24022B04AD100DDAB21 /* Assets.xcassets */; };
 		CAF3E24422B04AD100DDAB21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAF3E24222B04AD100DDAB21 /* LaunchScreen.storyboard */; };
@@ -16,6 +16,8 @@
 		CAF3E25A22B04AD100DDAB21 /* BibleApp_FinalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF3E25922B04AD100DDAB21 /* BibleApp_FinalUITests.swift */; };
 		CAF3E28322B04C4700DDAB21 /* Bible.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF3E28222B04C4700DDAB21 /* Bible.swift */; };
 		CAF3E28522B04C6000DDAB21 /* bible_cuv.db in Resources */ = {isa = PBXBuildFile; fileRef = CAF3E28422B04C5F00DDAB21 /* bible_cuv.db */; };
+		CAF3E2B422B5EA2100DDAB21 /* BibleChaptersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF3E2B322B5EA2100DDAB21 /* BibleChaptersVC.swift */; };
+		CAF3E2B622B5EA4E00DDAB21 /* BibleVersesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF3E2B522B5EA4E00DDAB21 /* BibleVersesVC.swift */; };
 		D5B7947D46D9F80232A75C76 /* Pods_BibleApp_Final.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373D7840AF67C415AE522D98 /* Pods_BibleApp_Final.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,7 +56,7 @@
 		373D7840AF67C415AE522D98 /* Pods_BibleApp_Final.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BibleApp_Final.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAF3E23622B04ACE00DDAB21 /* BibleApp_Final.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BibleApp_Final.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAF3E23922B04ACE00DDAB21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CAF3E23B22B04ACE00DDAB21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CAF3E23B22B04ACE00DDAB21 /* BibleBooksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleBooksVC.swift; sourceTree = "<group>"; };
 		CAF3E23E22B04ACE00DDAB21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CAF3E24022B04AD100DDAB21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAF3E24322B04AD100DDAB21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -67,6 +69,8 @@
 		CAF3E25B22B04AD200DDAB21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAF3E28222B04C4700DDAB21 /* Bible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bible.swift; sourceTree = "<group>"; };
 		CAF3E28422B04C5F00DDAB21 /* bible_cuv.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = bible_cuv.db; sourceTree = "<group>"; };
+		CAF3E2B322B5EA2100DDAB21 /* BibleChaptersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleChaptersVC.swift; sourceTree = "<group>"; };
+		CAF3E2B522B5EA4E00DDAB21 /* BibleVersesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleVersesVC.swift; sourceTree = "<group>"; };
 		FEB2C7F5FD28D3C38377FD37 /* Pods-BibleApp_Final.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibleApp_Final.debug.xcconfig"; path = "Target Support Files/Pods-BibleApp_Final/Pods-BibleApp_Final.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,7 +106,6 @@
 				FEB2C7F5FD28D3C38377FD37 /* Pods-BibleApp_Final.debug.xcconfig */,
 				00885BB48BCB1CD158B0637A /* Pods-BibleApp_Final.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -134,7 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				CAF3E26722B04AF100DDAB21 /* Supporting Files */,
-				CAF3E23B22B04ACE00DDAB21 /* ViewController.swift */,
+				CAF3E2B722B5EA6100DDAB21 /* Controllers */,
 				CAF3E23D22B04ACE00DDAB21 /* Main.storyboard */,
 				CAF3E24522B04AD100DDAB21 /* Info.plist */,
 			);
@@ -175,6 +178,16 @@
 				373D7840AF67C415AE522D98 /* Pods_BibleApp_Final.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CAF3E2B722B5EA6100DDAB21 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CAF3E23B22B04ACE00DDAB21 /* BibleBooksVC.swift */,
+				CAF3E2B322B5EA2100DDAB21 /* BibleChaptersVC.swift */,
+				CAF3E2B522B5EA4E00DDAB21 /* BibleVersesVC.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,15 +326,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-BibleApp_Final-checkManifestLockResult.txt",
 			);
@@ -335,13 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BibleApp_Final/Pods-BibleApp_Final-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BibleApp_Final/Pods-BibleApp_Final-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BibleApp_Final/Pods-BibleApp_Final-frameworks.sh\"\n";
@@ -354,7 +357,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAF3E23C22B04ACE00DDAB21 /* ViewController.swift in Sources */,
+				CAF3E23C22B04ACE00DDAB21 /* BibleBooksVC.swift in Sources */,
+				CAF3E2B622B5EA4E00DDAB21 /* BibleVersesVC.swift in Sources */,
+				CAF3E2B422B5EA2100DDAB21 /* BibleChaptersVC.swift in Sources */,
 				CAF3E23A22B04ACE00DDAB21 /* AppDelegate.swift in Sources */,
 				CAF3E28322B04C4700DDAB21 /* Bible.swift in Sources */,
 			);
