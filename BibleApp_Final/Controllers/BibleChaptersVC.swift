@@ -8,18 +8,35 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+private let kChaptersCellIdentifier = "kChaptersCell"
 
-class BibleChaptersVC: UICollectionViewController {
+class BibleChaptersVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
+    var text1: String?
+    
+    /// The collection view's flow layout.
+    private var flowLayout: UICollectionViewFlowLayout? {
+        return collectionView?.collectionViewLayout as? UICollectionViewFlowLayout
+    }
+    
+    override func loadView() {
+        super.loadView()
+        
+        flowLayout?.minimumLineSpacing = 5
+        flowLayout?.minimumInteritemSpacing = 5
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        collectionView?.delegate = self
+        collectionView?.dataSource = self
+        print("hahah\(self.text1 ?? "what")")
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+//        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kChaptersCellIdentifier)
 
         // Do any additional setup after loading the view.
     }
@@ -42,24 +59,28 @@ class BibleChaptersVC: UICollectionViewController {
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 0
+        return 1
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kChaptersCellIdentifier, for: indexPath)
     
-        // Configure the cell
+        if let chapterCell = cell as? BibleChaptersCell {
+            chapterCell.chapterNumLbl.text = "10章"
+        }
     
         return cell
     }
 
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 100, height: 100)
+    }
+    
     // MARK: UICollectionViewDelegate
 
     /*

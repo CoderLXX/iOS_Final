@@ -18,6 +18,12 @@
 		CAF3E28522B04C6000DDAB21 /* bible_cuv.db in Resources */ = {isa = PBXBuildFile; fileRef = CAF3E28422B04C5F00DDAB21 /* bible_cuv.db */; };
 		CAF3E2B422B5EA2100DDAB21 /* BibleChaptersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF3E2B322B5EA2100DDAB21 /* BibleChaptersVC.swift */; };
 		CAF3E2B622B5EA4E00DDAB21 /* BibleVersesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF3E2B522B5EA4E00DDAB21 /* BibleVersesVC.swift */; };
+		CAF3E2B922B5EDDA00DDAB21 /* BibleBooksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF3E2B822B5EDDA00DDAB21 /* BibleBooksCell.swift */; };
+		CAF3E2BB22B5EDF700DDAB21 /* BibleVersesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF3E2BA22B5EDF700DDAB21 /* BibleVersesCell.swift */; };
+		CAF3E2BD22B5EE1900DDAB21 /* BibleChaptersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF3E2BC22B5EE1900DDAB21 /* BibleChaptersCell.swift */; };
+		CAF3E2C022B5EE5C00DDAB21 /* BibleBooksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF3E2BF22B5EE5C00DDAB21 /* BibleBooksModel.swift */; };
+		CAF3E2C222B5EE7100DDAB21 /* BibleChaptersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF3E2C122B5EE7100DDAB21 /* BibleChaptersModel.swift */; };
+		CAF3E2C422B5EE9700DDAB21 /* BibleVersesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF3E2C322B5EE9700DDAB21 /* BibleVersesModel.swift */; };
 		D5B7947D46D9F80232A75C76 /* Pods_BibleApp_Final.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373D7840AF67C415AE522D98 /* Pods_BibleApp_Final.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +77,12 @@
 		CAF3E28422B04C5F00DDAB21 /* bible_cuv.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = bible_cuv.db; sourceTree = "<group>"; };
 		CAF3E2B322B5EA2100DDAB21 /* BibleChaptersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleChaptersVC.swift; sourceTree = "<group>"; };
 		CAF3E2B522B5EA4E00DDAB21 /* BibleVersesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleVersesVC.swift; sourceTree = "<group>"; };
+		CAF3E2B822B5EDDA00DDAB21 /* BibleBooksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleBooksCell.swift; sourceTree = "<group>"; };
+		CAF3E2BA22B5EDF700DDAB21 /* BibleVersesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleVersesCell.swift; sourceTree = "<group>"; };
+		CAF3E2BC22B5EE1900DDAB21 /* BibleChaptersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleChaptersCell.swift; sourceTree = "<group>"; };
+		CAF3E2BF22B5EE5C00DDAB21 /* BibleBooksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleBooksModel.swift; sourceTree = "<group>"; };
+		CAF3E2C122B5EE7100DDAB21 /* BibleChaptersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleChaptersModel.swift; sourceTree = "<group>"; };
+		CAF3E2C322B5EE9700DDAB21 /* BibleVersesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleVersesModel.swift; sourceTree = "<group>"; };
 		FEB2C7F5FD28D3C38377FD37 /* Pods-BibleApp_Final.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibleApp_Final.debug.xcconfig"; path = "Target Support Files/Pods-BibleApp_Final/Pods-BibleApp_Final.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,8 +148,10 @@
 		CAF3E23822B04ACE00DDAB21 /* BibleApp_Final */ = {
 			isa = PBXGroup;
 			children = (
-				CAF3E26722B04AF100DDAB21 /* Supporting Files */,
+				CAF3E2C522B5EE9E00DDAB21 /* Models */,
+				CAF3E2BE22B5EE2400DDAB21 /* Views */,
 				CAF3E2B722B5EA6100DDAB21 /* Controllers */,
+				CAF3E26722B04AF100DDAB21 /* Supporting Files */,
 				CAF3E23D22B04ACE00DDAB21 /* Main.storyboard */,
 				CAF3E24522B04AD100DDAB21 /* Info.plist */,
 			);
@@ -188,6 +202,26 @@
 				CAF3E2B522B5EA4E00DDAB21 /* BibleVersesVC.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CAF3E2BE22B5EE2400DDAB21 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CAF3E2B822B5EDDA00DDAB21 /* BibleBooksCell.swift */,
+				CAF3E2BA22B5EDF700DDAB21 /* BibleVersesCell.swift */,
+				CAF3E2BC22B5EE1900DDAB21 /* BibleChaptersCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CAF3E2C522B5EE9E00DDAB21 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CAF3E2BF22B5EE5C00DDAB21 /* BibleBooksModel.swift */,
+				CAF3E2C122B5EE7100DDAB21 /* BibleChaptersModel.swift */,
+				CAF3E2C322B5EE9700DDAB21 /* BibleVersesModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,9 +391,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAF3E2BB22B5EDF700DDAB21 /* BibleVersesCell.swift in Sources */,
 				CAF3E23C22B04ACE00DDAB21 /* BibleBooksVC.swift in Sources */,
+				CAF3E2BD22B5EE1900DDAB21 /* BibleChaptersCell.swift in Sources */,
 				CAF3E2B622B5EA4E00DDAB21 /* BibleVersesVC.swift in Sources */,
+				CAF3E2C022B5EE5C00DDAB21 /* BibleBooksModel.swift in Sources */,
 				CAF3E2B422B5EA2100DDAB21 /* BibleChaptersVC.swift in Sources */,
+				CAF3E2C222B5EE7100DDAB21 /* BibleChaptersModel.swift in Sources */,
+				CAF3E2C422B5EE9700DDAB21 /* BibleVersesModel.swift in Sources */,
+				CAF3E2B922B5EDDA00DDAB21 /* BibleBooksCell.swift in Sources */,
 				CAF3E23A22B04ACE00DDAB21 /* AppDelegate.swift in Sources */,
 				CAF3E28322B04C4700DDAB21 /* Bible.swift in Sources */,
 			);

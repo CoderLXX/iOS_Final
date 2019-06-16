@@ -8,11 +8,16 @@
 
 import UIKit
 
-class BibleVersesVC: UITableViewController {
+private let kVersesCellIdentifier = "kVersesCellIdentifier"
 
+class BibleVersesVC: UITableViewController {
+    
+    var text2: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        print("hahah\(self.text2 ?? "what2")")
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
