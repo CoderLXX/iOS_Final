@@ -12,7 +12,7 @@ private let kChaptersCellIdentifier = "kChaptersCell"
 
 class BibleChaptersVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
-    var text1: String?
+    var book: Book?
     
     /// The collection view's flow layout.
     private var flowLayout: UICollectionViewFlowLayout? {
@@ -28,33 +28,10 @@ class BibleChaptersVC: UICollectionViewController, UICollectionViewDelegateFlowL
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        collectionView?.delegate = self
-        collectionView?.dataSource = self
-        print("hahah\(self.text1 ?? "what")")
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-//        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kChaptersCellIdentifier)
-
-        // Do any additional setup after loading the view.
+        self.title = book?.fullName
+        
+        print(book)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
 
     // MARK: UICollectionViewDataSource
 
@@ -64,14 +41,14 @@ class BibleChaptersVC: UICollectionViewController, UICollectionViewDelegateFlowL
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return (book?.chapters)!
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kChaptersCellIdentifier, for: indexPath)
     
         if let chapterCell = cell as? BibleChaptersCell {
-            chapterCell.chapterNumLbl.text = "10章"
+            chapterCell.chapterNumLbl.text = String(indexPath.row)
         }
     
         return cell

@@ -18,26 +18,40 @@ class BibleBooksVC: UITableViewController {
     
     
     
-    enum Section: Int {
-        case newTestament = 0
-        case oldTestament
+    var books: [Book] = [] {
+        didSet {
+            tableView.reloadData()
+        }
     }
+    
+    private var destinationVC: BibleChaptersVC?
+    
+    
     
     // MARK: Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
+        
+        books = Bible.getBooks()
+        for book in books {
+            
+        }
+        
     }
    
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let selectedCell = sender as? UITableViewCell {
-            if let chapterController = segue.destination as? BibleChaptersVC {
-                print("hahahah00000000")
-                chapterController.text1 = "Chapter"
+        if let selectedCell = sender as? BibleBooksCell {
+            if let indexPath = tableView.indexPath(for: selectedCell) {
+                if let chapterController = segue.destination as? BibleChaptersVC {
+                    if indexPath.section == 0 {
+                        chapterController.book = books[indexPath.row]
+                    } else {
+                        chapterController.book = books[indexPath.row + 39]
+                    }
+                }
             }
         }
     }
@@ -58,13 +72,21 @@ class BibleBooksVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        if section == 0 {
+            return 39
+        }
+        return books.count - 39
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: kBooksCellIdentifier)
         if let bookCell = cell as? BibleBooksCell {
-            bookCell.bookNameLbl.text = "创世记"
+            if indexPath.section == 0 {
+                bookCell.bookNameLbl.text = books[indexPath.row].fullName
+                
+            } else {
+                bookCell.bookNameLbl.text = books[indexPath.row + 39].fullName
+            }
         }
         return cell!
     }
@@ -72,6 +94,7 @@ class BibleBooksVC: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        self.chapterVC.text1 = "chuangshiji"
 //        self.navigationController?.pushViewController(self.chapterVC, animated: true)
+//        print("hhsh")
     }
 }
 
