@@ -29,10 +29,22 @@ class BibleChaptersVC: UICollectionViewController, UICollectionViewDelegateFlowL
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = book?.fullName
-        
-        print(book)
     }
 
+    // MARK: -Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let selectedCell = sender as? BibleChaptersCell {
+            if let indexPath = collectionView?.indexPath(for: selectedCell) {
+                if let versesController = segue.destination as? BibleVersesVC {
+                    versesController.selectedBook = book
+                    versesController.selectedChapterNum = indexPath.row + 1
+                }
+            }
+        }
+    }
+    
+    
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -48,45 +60,10 @@ class BibleChaptersVC: UICollectionViewController, UICollectionViewDelegateFlowL
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kChaptersCellIdentifier, for: indexPath)
     
         if let chapterCell = cell as? BibleChaptersCell {
-            chapterCell.chapterNumLbl.text = String(indexPath.row)
+            chapterCell.chapterNumLbl.text = String(indexPath.row + 1)
         }
     
         return cell
     }
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 100, height: 100)
-    }
-    
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
-    }
-    */
 
 }

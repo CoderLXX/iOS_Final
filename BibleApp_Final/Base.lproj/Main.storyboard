@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Books-->
+        <!--圣经（和合本）-->
         <scene sceneID="u8f-BA-DsI">
             <objects>
                 <tableViewController id="ne5-bi-xmw" customClass="BibleBooksVC" customModule="BibleApp_Final" customModuleProvider="target" sceneMemberID="viewController">
@@ -46,7 +46,7 @@
                             <outlet property="delegate" destination="ne5-bi-xmw" id="WCs-5y-o8f"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Books" id="LFt-ts-dKb"/>
+                    <navigationItem key="navigationItem" title="圣经（和合本）" id="LFt-ts-dKb"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gIS-D6-H56" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -61,27 +61,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2Nc-2N-F5z">
-                            <size key="itemSize" width="80" height="80"/>
+                            <size key="itemSize" width="60" height="60"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="kChaptersCell" id="gbi-kp-wsX" customClass="BibleChaptersCell" customModule="BibleApp_Final" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1章" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJu-B1-Ob1">
-                                            <rect key="frame" x="8" y="8" width="64" height="64"/>
+                                            <rect key="frame" x="8" y="8" width="44" height="44"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </view>
+                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="wJu-B1-Ob1" firstAttribute="top" secondItem="gbi-kp-wsX" secondAttribute="topMargin" id="1fu-SN-Qr0"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="wJu-B1-Ob1" secondAttribute="trailing" id="FFu-He-6m9"/>
@@ -120,7 +121,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="1.起初，神创造天地" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="erC-oM-ou7">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="1.起初，神创造天地" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="erC-oM-ou7">
                                             <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>

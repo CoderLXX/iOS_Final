@@ -14,10 +14,6 @@ private let kBooksCellIdentifier = "kBooksCellIdentifier"
 class BibleBooksVC: UITableViewController {
 
     // MARK: Properities
-//    let chapterVC = BibleChaptersVC()
-    
-    
-    
     var books: [Book] = [] {
         didSet {
             tableView.reloadData()
@@ -34,9 +30,6 @@ class BibleBooksVC: UITableViewController {
         super.viewDidLoad()
         
         books = Bible.getBooks()
-        for book in books {
-            
-        }
         
     }
    
@@ -91,10 +84,5 @@ class BibleBooksVC: UITableViewController {
         return cell!
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        self.chapterVC.text1 = "chuangshiji"
-//        self.navigationController?.pushViewController(self.chapterVC, animated: true)
-//        print("hhsh")
-    }
 }
 
